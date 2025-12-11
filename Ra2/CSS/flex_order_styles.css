@@ -1,0 +1,44 @@
+/* Ra2/CSS/flex_order_styles.css */
+
+.flex-container {
+    display: flex;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.flex-item {
+    background-color: lightblue;
+    border: 1px solid blue;
+    padding: 20px;
+    margin: 5px;
+    text-align: center;
+    font-size: 20px;
+}
+
+/* Example of using order property */
+.item-1 { order: 3; }
+.item-2 { order: 1; }
+.item-3 { order: 2; }
+
+/* Another example container */
+.flex-container-alt {
+    display: flex;
+    flex-direction: row-reverse; /* Example of changing direction */
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.flex-item-alt {
+    background-color: lightcoral;
+    border: 1px solid red;
+    padding: 20px;
+    margin: 5px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.item-a { order: 2; }
+.item-b { order: 3; }
+.item-c { order: 1; }
