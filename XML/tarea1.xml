@@ -1,0 +1,87 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<catalogo_electronica>
+  <almacenes>
+    <almacen id="ALM01">
+      <nombre>Almacen Central Levante</nombre>
+      <localidad>Espinardo(Murcia)</localidad>
+    </almacen>
+    <almacen id="ALM02">
+      <nombre>Almacen Logistico Norte</nombre>
+      <localidad>Vitoria</localidad>
+    </almacen>
+    <almacen id="ALM03">
+      <nombre>Almacen SurEste</nombre>
+      <localidad>Huelva</localidad>
+    </almacen>
+  </almacenes>
+  <categorias>
+    <categoria nombre="Componentes">
+      <producto id="LEDRGB10MA">
+        <nombre>Led RGB con consumo de 10mA</nombre>
+        <precio_unitario>0.40</precio_unitario>
+        <stock>1500</stock>
+        <id_alm_ref>ALM01</id_alm_ref>
+        <id_alm_ref>ALM02</id_alm_ref>
+        <peddido_minimo>5</peddido_minimo>
+        <precio_especiales>
+          <rango_cantidad min="10" max="99">
+            <precio>0.35</precio>
+          </rango_cantidad>
+          <rango_cantidad min="100">
+            <precio>0.30</precio>
+          </rango_cantidad>
+        </precio_especiales>
+      </producto>
+
+    </categoria>
+    <categoria nombre="Herramientas">
+      <producto id="TACDCR">
+        <nombre>Transformador</nombre>
+        <precio_unitario>120</precio_unitario>
+        <stock>500</stock>
+        <id_alm_ref>ALM01</id_alm_ref>
+        <id_alm_ref>ALM03</id_alm_ref>
+        <peddido_minimo>1</peddido_minimo>
+        <precio_especiales>
+          <rango_cantidad min="2" max="4">
+            <precio>480</precio>
+          </rango_cantidad>
+          <rango_cantidad min="5">
+            <precio>460</precio>
+          </rango_cantidad>
+        </precio_especiales>
+      </producto>
+
+    </categoria>
+    <categoria nombre="Manuales">
+      <producto id="MAN901">
+        <nombre>Manual de voltajes</nombre>
+        <precio_unitario>2.90</precio_unitario>
+        <stock>890</stock>
+        <id_alm_ref>ALM01</id_alm_ref>
+        <peddido_minimo>1</peddido_minimo>
+        <precio_especiales>
+          <rango_cantidad min="5" max="15">
+            <precio>2.50</precio>
+          </rango_cantidad>
+          <rango_cantidad min="16">
+            <precio>2.10</precio>
+          </rango_cantidad>
+        </precio_especiales>
+      </producto>
+
+    </categoria>
+
+  </categorias>
+  <kits>
+    <kit id='KIT-ILUM01'>
+      <nombre>Kit de iluminacion basica 12V</nombre>
+      <descripcion>Incluye transformador y 4 leds para montaje rapido</descripcion>
+      <producto_kit>
+        <item_kit id="LEDRGB10MA" cantidad="4"></item_kit>
+        <item_kit id="TACDCR" cantidad="1"></item_kit>
+        <item_kit id="MAN901" cantidad="1"></item_kit>
+      </producto_kit>
+    </kit>
+  </kits>
+</catalogo_electronica>
