@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Elemento raíz -->
+  <xs:element name="almacen">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="productos" type="Tproductos"/>
+        <xs:element name="ubicaciones" type="Tubicaciones"/>
+        <xs:element name="palets" type="Tpalets"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Tipos para Productos -->
+  <xs:complexType name="Tproductos">
+    <xs:sequence>
+      <xs:element name="producto" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:attribute name="id" type="xs:string" use="required"/>
+          <xs:attribute name="descripcion" type="xs:string" use="required"/>
+          <xs:attribute name="valor_ud" type="xs:decimal" use="required"/>
+          <xs:attribute name="unidades" type="xs:string" use="required"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Tipos para Ubicaciones -->
+  <xs:complexType name="Tubicaciones">
+    <xs:sequence>
+      <xs:element name="nave" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="sector" maxOccurs="unbounded">
+              <xs:complexType mixed="true">
+                <xs:attribute name="id" type="xs:string" use="required"/>
+                <xs:attribute name="estado" type="xs:string" use="required"/>
+                <xs:attribute name="capacidad" type="xs:integer" use="optional"/>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+          <xs:attribute name="id" type="xs:string" use="required"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Tipos para Palets -->
+  <xs:complexType name="Tpalets">
+    <xs:sequence>
+      <xs:element name="palet" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="contenido" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:attribute name="producto" type="xs:string" use="required"/>
+                <xs:attribute name="cantidad" type="xs:integer" use="required"/>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="observaciones" type="xs:string" minOccurs="0"/>
+          </xs:sequence>
+          <xs:attribute name="id" type="xs:string" use="required"/>
+          <xs:attribute name="ubicacion" type="xs:string" use="optional"/>
+          <xs:attribute name="verificado" type="xs:dateTime" use="optional"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
