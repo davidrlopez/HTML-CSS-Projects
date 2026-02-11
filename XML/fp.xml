@@ -1,0 +1,132 @@
+<fp>
+  <ciclos>
+    <!-- GRADO BÁSICO -->
+    <ciclo siglas="IFC01P">
+      <nombre>Informática y Comunicaciones</nombre>
+      <familiaProfesional>Informática y comunicaciones</familiaProfesional>
+      <duracion unidad="horas">2000</duracion>
+      <grado>Básico</grado>
+      <referenteInternacional clasificacion="CINE">3</referenteInternacional>
+    </ciclo>
+    <ciclo siglas="IFC02P">
+      <nombre>Informática de Oficina</nombre>
+      <familiaProfesional>Informática y comunicaciones</familiaProfesional>
+      <duracion unidad="horas">2000</duracion>
+      <grado>Básico</grado>
+      <referenteInternacional clasificacion="CINE">3</referenteInternacional>
+    </ciclo>
+    <!-- GRADO MEDIO -->
+    <ciclo siglas="SMR">
+      <nombre>Sistemas Microinformáticos y Redes</nombre>
+      <familiaProfesional>Informática y comunicaciones</familiaProfesional>
+      <duracion unidad="horas">2000</duracion>
+      <grado>Medio</grado>
+      <referenteInternacional clasificacion="CINE">3</referenteInternacional>
+    </ciclo>
+    <!-- GRADO SUPERIOR -->
+    <ciclo siglas="ASIR">
+      <nombre>Administración de Sistemas Informáticos en Red</nombre>
+      <familiaProfesional>Informática y comunicaciones</familiaProfesional>
+      <duracion unidad="horas">2000</duracion>
+      <grado>Superior</grado>
+      <referenteInternacional clasificacion="CINE">5</referenteInternacional>
+    </ciclo>
+    <ciclo siglas="DAM">
+      <nombre>Desarrollo de Aplicaciones Multiplataforma</nombre>
+      <familiaProfesional>Informática y comunicaciones</familiaProfesional>
+      <duracion unidad="horas">2000</duracion>
+      <grado>Superior</grado>
+      <referenteInternacional clasificacion="CINE">5</referenteInternacional>
+    </ciclo>
+    <ciclo siglas="DAW">
+      <nombre>Desarrollo de Aplicaciones Web</nombre>
+      <familiaProfesional>Informática y comunicaciones</familiaProfesional>
+      <duracion unidad="horas">2000</duracion>
+      <grado>Superior</grado>
+      <referenteInternacional clasificacion="CINE">5</referenteInternacional>
+    </ciclo>
+    <!-- CURSOS DE ESPECIALIZACIÓN (POST-GRADO) -->
+    <ciclo siglas="CE_CIBER">
+      <nombre>
+        Ciberseguridad en Entornos de las Tecnologías de la Información
+</nombre>
+      <familiaProfesional>Informática y comunicaciones</familiaProfesional>
+      <duracion unidad="horas">720</duracion>
+      <grado>Especialización</grado>
+      <referenteInternacional clasificacion="CINE">5</referenteInternacional>
+    </ciclo>
+    <ciclo siglas="CE_IA">
+      <nombre>Inteligencia Artificial y Big Data</nombre>
+      <familiaProfesional>Informática y comunicaciones</familiaProfesional>
+      <duracion unidad="horas">600</duracion>
+      <grado>Especialización</grado>
+      <referenteInternacional clasificacion="CINE">5</referenteInternacional>
+    </ciclo>
+  </ciclos>
+</fp>
+<fp>
+  <ciclos>
+    <!-- GRADO BÁSICO -->
+    <ciclo siglas="IFC01P">
+      <nombre>Informática y Comunicaciones</nombre>
+      <familiaProfesional>Informática y comunicaciones</familiaProfesional>
+      <duracion unidad="horas">2000</duracion>
+      <grado>Básico</grado>
+      <referenteInternacional clasificacion="CINE">3</referenteInternacional>
+    </ciclo>
+    <ciclo siglas="IFC02P">
+      <nombre>Informática de Oficina</nombre>
+      <familiaProfesional>Informática y comunicaciones</familiaProfesional>
+      <duracion unidad="horas">2000</duracion>
+      <grado>Básico</grado>
+      <referenteInternacional clasificacion="CINE">3</referenteInternacional>
+    </ciclo>
+    <!-- GRADO MEDIO -->
+    <ciclo siglas="SMR">
+      <nombre>Sistemas Microinformáticos y Redes</nombre>
+      <familiaProfesional>Informática y comunicaciones</familiaProfesional>
+      <duracion unidad="horas">2000</duracion>
+      <grado>Medio</grado>
+      <referenteInternacional clasificacion="CINE">3</referenteInternacional>
+    </ciclo>
+    <!-- GRADO SUPERIOR -->
+    <ciclo siglas="ASIR">
+      <nombre>Administración de Sistemas Informáticos en Red</nombre>
+      <familiaProfesional>Informática y comunicaciones</familiaProfesional>
+      <duracion unidad="horas">2000</duracion>
+      <grado>Superior</grado>
+      <referenteInternacional clasificacion="CINE">5</referenteInternacional>
+    </ciclo>
+    <ciclo siglas="DAM">
+      <nombre>Desarrollo de Aplicaciones Multiplataforma</nombre>
+      <familiaProfesional>Informática y comunicaciones</familiaProfesional>
+      <duracion unidad="horas">2000</duracion>
+      <grado>Superior</grado>
+      <referenteInternacional clasificacion="CINE">5</referenteInternacional>
+    </ciclo>
+    <ciclo siglas="DAW">
+      <nombre>Desarrollo de Aplicaciones Web</nombre>
+      <familiaProfesional>Informática y comunicaciones</familiaProfesional>
+      <duracion unidad="horas">2000</duracion>
+      <grado>Superior</grado>
+      <referenteInternacional clasificacion="CINE">5</referenteInternacional>
+    </ciclo>
+    <!-- CURSOS DE ESPECIALIZACIÓN (POST-GRADO) -->
+    <ciclo siglas="CE_CIBER">
+      <nombre>
+        Ciberseguridad en Entornos de las Tecnologías de la Información
+</nombre>
+      <familiaProfesional>Informática y comunicaciones</familiaProfesional>
+      <duracion unidad="horas">720</duracion>
+      <grado>Especialización</grado>
+      <referenteInternacional clasificacion="CINE">5</referenteInternacional>
+    </ciclo>
+    <ciclo siglas="CE_IA">
+      <nombre>Inteligencia Artificial y Big Data</nombre>
+      <familiaProfesional>Informática y comunicaciones</familiaProfesional>
+      <duracion unidad="horas">600</duracion>
+      <grado>Especialización</grado>
+      <referenteInternacional clasificacion="CINE">5</referenteInternacional>
+    </ciclo>
+  </ciclos>
+</fp>
