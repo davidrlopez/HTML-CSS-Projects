@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<gym_ruperto>
+<actividades_gym>
+<fila_actividades cod="10" tipo="1">
+  <nombre>Aparatos</nombre>
+</fila_actividades>
+<fila_actividades cod="11" tipo="1">
+  <nombre>Piscina</nombre>
+</fila_actividades>
+<fila_actividades cod="20" tipo="2">
+  <nombre>Aerobic</nombre>
+</fila_actividades>
+<fila_actividades cod="21" tipo="2">
+  <nombre>Pilates</nombre>
+</fila_actividades >
+<fila_actividades cod="22" tipo="2">
+  <nombre>Spinning</nombre>
+</fila_actividades>
+<fila_actividades cod="31" tipo="3">
+  <nombre>Padel</nombre>
+</fila_actividades>
+  <fila_actividades cod="32" tipo="3">
+  <nombre>Tenis</nombre>
+</fila_actividades>
+</actividades_gym>
+<socios_gym>
+<fila_socios>
+   <cod>10</cod>
+   <nombre>JUAN</nombre>
+   <fecha_alta>08/02/09</fecha_alta>
+   <direccion>GUADALAJARA</direccion>
+   <cuota_fija>100</cuota_fija>
+ </fila_socios>
+<fila_socios>
+  <cod>11</cod>
+  <nombre>ANA</nombre>
+  <fecha_alt>18/02/09</fecha_alt>
+  <direccion>GUADALAJARA</direccion>
+  <cuota_fija>100</cuota_fija>
+</fila_socios>
+  <fila_socios>
+  <cod>12</cod>
+  <nombre>MANUEL</nombre>
+  <fecha_alt>18/04/09</fecha_alt>
+  <direccion>MADRID</direccion>
+  <cuota_fija>110</cuota_fija>
+</fila_socios>
+  <fila_socios>
+  <cod>13</cod>
+  <nombre>MARIA</nombre>
+  <fecha_alt>06/06/09</fecha_alt>
+  <direccion>MADRID</direccion>
+  <cuota_fija>110</cuota_fija>
+</fila_socios>
+  <fila_socios>
+  <cod>14</cod>
+  <nombre>FERNANDO</nombre>
+  <fecha_alt>10/07/09</fecha_alt>
+  <direccion>AZUQUECA</direccion>
+  <cuota_fija>110</cuota_fija>
+</fila_socios>
+<fila_socios><cod>15</cod>
+  <nombre>LUIS</nombre>
+  <fecha_alt>19/08/09</fecha_alt>
+  <direccion>AZUQUECA</direccion>
+  <cuota_fija>110</cuota_fija>
+</fila_socios>
+<fila_socios>
+  <cod>16</cod><nombre>CLARA</nombre>
+  <fecha_alt>27/09/09</fecha_alt>
+  <direccion>ALCALA</direccion>
+  <cuota_fija>110</cuota_fija>
+</fila_socios>
+</socios_gym>
+<uso_gimnasio>
+<fila_uso>
+  <codsocio>10</codsocio>
+  <codactiv>10</codactiv>
+  <fecha>16/11/09</fecha>
+  <horainicio>17</horainicio>
+  <horafinal>18</horafinal>
+  </fila_uso>
+<fila_uso>
+  <codsocio>10</codsocio>
+  <codactiv>22</codactiv>
+  <fecha>16/12/09</fecha>
+  <horainicio>18</horainicio>
+  <horafinal>19</horafinal>
+</fila_uso>
+<fila_uso>
+   <codsocio>10</codsocio>
+   <codactiv>10</codactiv>
+   <fecha>17/11/09</fecha>
+   <horainicio>17</horainicio>
+   <horafinal>18</horafinal>
+</fila_uso>
+<fila_uso>
+   <codsocio>10</codsocio>
+   <codactiv>10</codactiv>
+   <fecha>18/11/09</fecha>
+   <horainicio>17</horainicio>
+   <horafinal>18</horafinal>
+ </fila_uso>
+<fila_uso>
+   <codsocio>10</codsocio>
+   <codactiv>10</codactiv>
+   <fecha>19/11/09</fecha>
+   <horainicio>17</horainicio>
+   <horafinal>18</horafinal>
+</fila_uso>
+<fila_uso>
+   <codsocio>10</codsocio>
+   <codactiv>22</codactiv>
+   <fecha>21/12/09</fecha>
+   <horainicio>20</horainicio>
+   <horafinal>21</horafinal>
+</fila_uso>
+<fila_uso>
+  <codsocio>10</codsocio>
+  <codactiv>31</codactiv>
+  <fecha>22/12/09</fecha>
+  <horainicio>17</horainicio>
+  <horafinal>19</horafinal>
+</fila_uso>
+<fila_uso>
+   <codsocio>11</codsocio>
+   <codactiv>31</codactiv>
+   <fecha>16/12/09</fecha>
+   <horainicio>17</horainicio>
+   <horafinal>19</horafinal>
+</fila_uso>
+<fila_uso>
+   <codsocio>11</codsocio>
+   <codactiv>31</codactiv>
+   <fecha>19/12/09</fecha>
+   <horainicio>17</horainicio>
+   <horafinal>19</horafinal>
+</fila_uso>
+<fila_uso>
+   <codsocio>13</codsocio>
+   <codactiv>21</codactiv>
+   <fecha>08/12/09</fecha>
+   <horainicio>18</horainicio>
+   <horafinal>19</horafinal>
+</fila_uso>
+<fila_uso>
+   <codsocio>13</codsocio>
+   <codactiv>21</codactiv>
+   <fecha>10/12/09</fecha>
+   <horainicio>18</horainicio>
+   <horafinal>19</horafinal>
+</fila_uso>
+<fila_uso>
+   <codsocio>13</codsocio>
+   <codactiv>21</codactiv>
+   <fecha>15/12/09</fecha>
+   <horainicio>18</horainicio>
+   <horafinal>19</horafinal>
+</fila_uso>
+<fila_uso>
+   <codsocio>13</codsocio>
+   <codactiv>21</codactiv>
+   <fecha>17/12/09</fecha>
+   <horainicio>18</horainicio>
+   <horafinal>19</horafinal>
+</fila_uso>
+<fila_uso>
+   <codsocio>13</codsocio>
+   <codactiv>32</codactiv>
+   <fecha>09/12/09</fecha>
+   <horainicio>20</horainicio>
+   <horafinal>21</horafinal>
+</fila_uso>
+<fila_uso>
+   <codsocio>13</codsocio>
+   <codactiv>32</codactiv>
+   <fecha>11/12/09</fecha>
+   <horainicio>20</horainicio>
+   <horafinal>21</horafinal>
+</fila_uso>
+<fila_uso>
+   <codsocio>14</codsocio>
+   <codactiv>32</codactiv>
+   <fecha>12/11/09</fecha>
+   <horainicio>20</horainicio>
+   <horafinal>21</horafinal>
+</fila_uso>
+</uso_gimnasio>
+</gym_ruperto> 
