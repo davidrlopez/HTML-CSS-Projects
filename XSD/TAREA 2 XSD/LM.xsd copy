@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+    <!-- ============================================================ -->
+    <!--  TIPOS SIMPLES                                               -->
+    <!-- ============================================================ -->
+
+    <!-- Rótulo de opción: solo a, b, c, d, e, f -->
+    <xs:simpleType name="tipoRotulo">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="a"/>
+            <xs:enumeration value="b"/>
+            <xs:enumeration value="c"/>
+            <xs:enumeration value="d"/>
+            <xs:enumeration value="e"/>
+            <xs:enumeration value="f"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Descripción de opción: máximo 200 caracteres -->
+    <xs:simpleType name="tipoDescripcionOpcion">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="200"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Atributo correcta: solo admite el valor booleano true -->
+    <!-- Se usa xs:boolean restringida con pattern para impedir false/1/0 -->
+    <xs:simpleType name="tipoCorrecta">
+        <xs:restriction base="xs:boolean">
+            <xs:pattern value="true"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Orden del test: entero entre 1 y 999 -->
+    <xs:simpleType name="tipoOrden">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1"/>
+            <xs:maxInclusive value="999"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Puntos: hasta 2 dígitos enteros y 3 fraccionarios, no negativos.
+         totalDigits=5 + fractionDigits=3 garantizan la estructura de dígitos,
+         y maxInclusive=99.999 cierra el hueco que deja totalDigits al contar
+         solo dígitos significativos (p.ej. 100.0 tiene 4 signif. y pasaría
+         totalDigits=5 sin el maxInclusive). -->
+    <xs:simpleType name="tipoPuntos">
+        <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="99.999"/>
+            <xs:totalDigits value="5"/>
+            <xs:fractionDigits value="3"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- ID de ejercicio: P + dígito 1-9 + E + número 1-99
+         Se basa en xs:ID para que actúe como identificador único en el doc. -->
+    <xs:simpleType name="tipoIdEjercicio">
+        <xs:restriction base="xs:ID">
+            <xs:pattern value="P[1-9]E([1-9]|[1-9][0-9])"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+    <!-- ============================================================ -->
+    <!--  ELEMENTO RAÍZ: modulo                                       -->
+    <!-- ============================================================ -->
+
+    <xs:element name="modulo">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- Única sección unidades, obligatoria -->
+                <xs:element name="unidades">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <!-- Al menos una unidad -->
+                            <xs:element name="unidad" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <!-- Batería de tests: opcional (0 o más) -->
+                                        <xs:element name="test" minOccurs="0" maxOccurs="unbounded">
+                                            <xs:complexType mixed="true">
+                                                <!-- Contenido mixto: texto libre (enunciado) + elemento opciones -->
+                                                <xs:sequence>
+                                                    <xs:element name="opciones">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <!-- Al menos una opción -->
+                                                                <xs:element name="opcion" minOccurs="1" maxOccurs="unbounded">
+                                                                    <xs:complexType>
+                                                                        <xs:attribute name="rotulo"      type="tipoRotulo"           use="required"/>
+                                                                        <xs:attribute name="descripcion" type="tipoDescripcionOpcion" use="required"/>
+                                                                        <!-- correcta es opcional; si aparece, solo puede valer "true" -->
+                                                                        <xs:attribute name="correcta"    type="tipoCorrecta"          use="optional"/>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                                <xs:attribute name="id"    type="xs:ID"    use="required"/>
+                                                <xs:attribute name="orden" type="tipoOrden" use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <!-- id declarado como xs:ID: identificador único en el documento -->
+                                    <xs:attribute name="id"     type="xs:ID"     use="required"/>
+                                    <xs:attribute name="nombre" type="xs:string" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <!-- Sección prueba: opcional, puede haber varias -->
+                <xs:element name="prueba" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <!-- Al menos una parte -->
+                            <xs:element name="parte" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <!-- Al menos un ejercicio -->
+                                        <xs:element name="ejercicio" minOccurs="1" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <!-- enunciado: obligatorio -->
+                                                    <xs:element name="enunciado" type="xs:string"/>
+                                                    <!-- items: opcional; si existe, contiene 1 o más item -->
+                                                    <xs:element name="items" minOccurs="0" maxOccurs="1">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="item" minOccurs="1" maxOccurs="unbounded">
+                                                                    <xs:complexType>
+                                                                        <xs:attribute name="descripcion" type="xs:string"  use="required"/>
+                                                                        <!-- peso (porcentaje): opcional -->
+                                                                        <xs:attribute name="peso"        type="xs:integer" use="optional"/>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <!-- anexos: opcional; si existe, contiene 1 o más anexo.
+                                                         Puede aparecer tras enunciado y/o tras items. -->
+                                                    <xs:element name="anexos" minOccurs="0" maxOccurs="1">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="anexo" minOccurs="1" maxOccurs="unbounded">
+                                                                    <xs:complexType>
+                                                                        <xs:attribute name="src" type="xs:string" use="required"/>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                                <!-- id con patrón P[1-9]E[1-99], declarado como xs:ID -->
+                                                <xs:attribute name="id"     type="tipoIdEjercicio" use="required"/>
+                                                <xs:attribute name="puntos" type="tipoPuntos"      use="required"/>
+                                                <!-- unidad referencia al id de una unidad (xs:IDREF).
+                                                     El xs:keyref de más abajo garantiza que la referencia
+                                                     apunte específicamente a un unidad/@id. -->
+                                                <xs:attribute name="unidad" type="xs:IDREF"        use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="id"            type="xs:ID"      use="required"/>
+                                    <xs:attribute name="titulo"        type="xs:string"  use="required"/>
+                                    <!-- tarea es opcional -->
+                                    <xs:attribute name="tarea"         type="xs:anyURI"  use="optional"/>
+                                    <!-- puntos_totales usa el mismo tipo restringido que puntos -->
+                                    <xs:attribute name="puntos_totales" type="tipoPuntos" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="id"     type="xs:ID"    use="required"/>
+                        <xs:attribute name="titulo" type="xs:string" use="required"/>
+                        <xs:attribute name="fecha"  type="xs:date"  use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="id"     type="xs:ID"    use="required"/>
+            <xs:attribute name="titulo" type="xs:string" use="required"/>
+        </xs:complexType>
+
+        <!-- ============================================================ -->
+        <!--  RESTRICCIONES DE IDENTIDAD                                  -->
+        <!-- ============================================================ -->
+
+        <!-- Declara unidad/@id como clave única dentro de este módulo -->
+        <xs:key name="claveUnidad">
+            <xs:selector xpath="unidades/unidad"/>
+            <xs:field xpath="@id"/>
+        </xs:key>
+
+        <!-- ejercicio/@unidad debe referenciar exactamente un unidad/@id -->
+        <xs:keyref name="refEjercicioUnidad" refer="claveUnidad">
+            <xs:selector xpath="prueba/parte/ejercicio"/>
+            <xs:field xpath="@unidad"/>
+        </xs:keyref>
+
+    </xs:element>
+
+</xs:schema>
