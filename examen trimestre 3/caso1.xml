@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<investigacion>
+    <informacion>
+        <titulo>El asesinato del profesor de informática</titulo>
+        <descripcion>El 27 de mayo de 2026, el profesor de informática Juan Pedro fue encontrado
+            muerto en su despacho del instituto. El cuerpo presentaba un golpe en la cabeza, y el
+            arma del crimen no fue encontrada en la escena del crimen. La policía inició una
+            investigación, y pronto se centró en varios sospechosos.</descripcion>
+        <imagen>./img/crimen.png</imagen>
+        <fecha>2026-05-27</fecha>
+    </informacion>
+    <personajes>
+        <personaje id="AP01" tipo="sospechoso">
+            <nombre>Antonio Pérez</nombre>
+            <edad>35</edad>
+            <profesion>Profesor de Matemáticas</profesion>
+            <sexo>H</sexo>
+            <imagen>./img/antonio.png</imagen>
+            <icono>fa-solid fa-chalkboard-user</icono>
+            <bio>Antonio Pérez es un hombre arrogante y ambicioso, que siempre ha envidiado a Juan.
+                Tiene denuncias por violencia de género de su exmujer. Es un profesor de matemáticas
+                estricto y exigente, que siempre busca la perfección.</bio>
+            <motivo>Asesinó a Juan por descubrir su relación</motivo>
+            <votos>145</votos>
+        </personaje>
+        <personaje id="JG02" tipo="víctima">
+            <nombre>Juan Pedro</nombre>
+            <edad>51</edad>
+            <sexo>H</sexo>
+            <profesion>Profesor de Informática</profesion>
+            <imagen>./img/juan1.png</imagen>
+            <icono>fa-solid fa-skull</icono>
+            <bio>Juan Pedro es un hombre tranquilo y reservado, pero con un pasado oscuro. Había
+                sido condenado por
+                un delito de ciberseguridad. Es un profesor de informática respetado y querido por sus
+                alumnos, pero
+                también es un hombre misterioso.</bio>
+        </personaje>
+        <personaje id="ML03" tipo="sospechoso">
+            <nombre>María López</nombre>
+            <edad>28</edad>
+            <sexo>M</sexo>
+            <profesion>Profesora de Literatura</profesion>
+            <imagen>./img/maria.png</imagen>
+            <icono>fa-solid fa-chalkboard-user</icono>
+            <bio>María López es una mujer inteligente y perspicaz, que se siente atraída por Juan
+                Pedro.
+                Es una profesora de literatura joven y entusiasta, que está empezando su carrera
+                como profesora.</bio>
+            <motivo>Asesinó a Juan por celos.</motivo>
+            <votos>165</votos>
+        </personaje>
+        <personaje id="PB04" tipo="sospechoso">
+            <nombre>Pedro Benito</nombre>
+            <edad>60</edad>
+            <sexo>H</sexo>
+            <profesion>Conserje</profesion>
+            <imagen>./img/pedro.png</imagen>
+            <icono>fa-solid fa-building-shield</icono>
+            <bio>Pedro Benito es un hombre amable y servicial, pero con una adicción al juego. Es el
+                conserje de la
+                escuela, que lleva muchos años trabajando allí. Hay gente que sospecha que es el
+                responsable del robo de
+                varios ordenadores del centro.</bio>
+            <motivo>Asesinó a Juan para que no se descubriese su robo</motivo>
+            <votos>71</votos>
+        </personaje>
+        <personaje id="DF05" tipo="sospechoso">
+            <nombre>David Fernández</nombre>
+            <edad>17</edad>
+            <sexo>H</sexo>
+            <profesion>Alumno</profesion>
+            <imagen>./img/david.png</imagen>
+            <icono>fa-solid fa-graduation-cap</icono>
+            <bio>David Fernández es un chico tímido y solitario, que es acosado por sus compañeros.
+                Es un alumno de
+                último curso, que está a punto de graduarse. Juan es su tutor pero no hacía nada por
+                impedir su acoso.</bio>
+            <motivo>Asesinó a Juan por no impedir su acoso.</motivo>
+            <votos>124</votos>
+        </personaje>
+        <personaje id="SM06" tipo="sospechoso">
+            <nombre>Sandra Martínez</nombre>
+            <edad>18</edad>
+            <sexo>M</sexo>
+            <profesion>Alumna</profesion>
+            <imagen>./img/sandra.png</imagen>
+            <icono>fa-solid fa-graduation-cap</icono>
+            <bio>Sandra Martínez es una chica guapa y muy popular. Es una alumna de último curso,
+                que está a punto de
+                graduarse. Se comenta que en un viaje de estudios, tuvo un romance con su profesor
+                de matemáticas.</bio>
+            <motivo>Asesinó a Juan por denunciar su relación con el profesor de matemáticas.</motivo>
+            <votos>87</votos>
+        </personaje>
+        <personaje id="LR07" tipo="sospechoso">
+            <nombre>Laura Rodríguez</nombre>
+            <edad>45</edad>
+            <sexo>M</sexo>
+            <profesion>Profesora de Inglés</profesion>
+            <imagen>./img/laura2.png</imagen>
+            <icono>fa-solid fa-chalkboard-user</icono>
+            <bio>Laura Rodríguez es una mujer extrovertida y popular, que mantiene una relación
+                formal con Juan Pedro.
+                Es una profesora de inglés carismática y atractiva, que es muy querida por sus
+                alumnos.</bio>
+            <motivo>Asesinó a Juan por su romance con otra profesora.</motivo>
+            <votos>68</votos>
+        </personaje>
+    </personajes>
+    <pistas>
+        <pista titulo="Un amor imposible">
+            <personajes>
+                <personaje>JG02</personaje>
+                <personaje>AP01</personaje>
+                <personaje>SM06</personaje>
+            </personajes>
+            <descripcion>
+                <evento>Juan recibió una foto anónima de Sandra y Antonio en actitud muy cariñosa
+                    mientras salían de un aula.</evento>
+                <evento>Al mostrarle la foto a Antonio, este se puso muy nervioso y trató de
+                    justificarse, pero Juan no le creyó.</evento>
+                <evento>Ambos discutieron. Se oyeron gritos y golpes.</evento>
+                <evento>Sandra se asomó a la ventana de su despacho y vio a los dos profesores
+                    peleándo.</evento>
+                <evento>Sandra entró en el despacho de Juan, con una expresión de sorpresa y miedo.
+                    Tenía algo escondido en su mano, lo que parecía un arma.</evento>
+            </descripcion>
+        </pista>
+        <pista
+            titulo="Un robo muy extraño">
+            <personajes>
+                <personaje>JG02</personaje>
+                <personaje>PB04</personaje>
+                <personaje>DF05</personaje>
+            </personajes>
+            <descripcion>
+                <evento> Pedro, el guarda de seguridad, mostró a Juan unas imágenes de las cámaras
+                    de seguridad donde David, el alumno acosado, entraba en su despacho y salía con
+                    algo en la mochila.</evento>
+                <evento>Pedro acusó a David de robar su ordenador portátil, pero Juan lo desmintió
+                    ya que lo había usado recientemente.</evento>
+                <evento>Juan y Pedro fueron a su despacho, y vieron que la puerta estaba
+                    entreabierta. </evento>
+                <evento>Dentro se encontraba David, que estaba sentado en el escritorio de Juan, con
+                    el ordenador portátil encendido.</evento>
+                <evento>David los miró con una sonrisa maliciosa. Pedro bloqueó la puerta del
+                    despacho.</evento>
+            </descripcion>
+        </pista>
+        <pista titulo="Celos">
+            <personajes>
+                <personaje>JG02</personaje>
+                <personaje>ML03</personaje>
+                <personaje>LR07</personaje>
+            </personajes>
+            <descripcion>
+                <evento> María recibió una llamada de Laura, para que se personalizara en el despacho de Juan por un asunto urgente.
+                </evento>
+                <evento>Al llegar, se encontró con Juan y Laura, la profesora de inglés, que la
+                    esperaba con una cara de angustia. Laura le dijo que sabía que ambos eran
+                    amantes, y que tenían que dejar su relación.
+                </evento>
+                <evento>Juan trató de explicar que no era cierto, que solo eran amigos. Laura no le
+                    creyó, y les mostró una carta que había encontrado en el buzón de Juan, donde
+                    María le declaraba su amor.
+                </evento>
+                <evento>Juan se dio cuenta de que María le había tendido una trampa, y que había
+                    usado la carta para romper su relación con Laura.
+                </evento>
+                <evento>Juan intentó salir del despacho, pero María apareció por detrás y le cerró
+                    la puerta con llave. María sacó un cuchillo de su bolso, y le dijo a Juan que si
+                    no era suyo, no sería de nadie.
+                </evento>
+            </descripcion>
+        </pista>
+    </pistas>
+</investigacion>

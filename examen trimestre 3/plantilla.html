@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título del suceso</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- cabecera de la web -->
+    <header id="inicio">
+        <!-- título y descripción del suceso -->
+        <h1>Título del suceso</h1>
+        <p>Descripción del suceso.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis unde, qui reiciendis nisi ea officia obcaecati
+            quibusdam. Autem recusandae repellat eos doloribus quibusdam impedit deserunt, est voluptatibus tenetur
+            delectus necessitatibus odit at explicabo, iusto unde!</p>
+        <!-- imágenes de la cabecera -->
+        <div class="header-images">
+            <!-- escena del suceso -->
+            <img src="img/suceso_escena.png" alt="escena suceso">
+            <!-- imágen flotante -->
+            <img class="transparente" src="img/sangre.png" alt="sangre">
+        </div>
+        <!-- menú de navegación a las distintas secciones de la web -->
+        <nav>
+            <ul>
+                <li><a href="#personajes">Personajes</a></li>
+                <li><a href="#acontecimientos">Acontecimientos</a></li>
+                <li><a href="#estadisticas">Estadísticas</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- capa que contiene a todos los personajes del suceso -->
+    <main id="personajes" class="contenedor-80">
+        <!-- ficha del personaje 1 -->
+        <div class="card">
+            <!-- edad del personaje 1-->
+            <h3>35</h3>
+            <!-- icono del personaje 1-->
+            <i class="fa-solid fa-person"></i>
+            <!-- imagen del personaje 1 (se muestra por duplicado) -->
+            <div class="card-image">
+                <!-- imagen del personaje 1 -->
+                <img src="img/perfil.png" alt="nombre apellidos">
+                <!-- sombra del personaje 1 -->
+                <img class="blur" src="img/perfil.png" alt="nombre del personaje">
+            </div>
+            <!-- descripcion del personaje 1 -->
+            <div class="text">
+                <h2>Personaje 1</h2>
+                <h4>Profesión del personaje 1</h4>
+                <p>Descripción del personaje.
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure ab dolorum molestias totam excepturi,
+                    odit nostrum non sequi? Illum, quod! Impedit, et?</p>
+            </div>
+        </div>
+        <!-- ficha del personaje 2 -->
+        <div class="card destacado">
+            <!-- edad del personaje 2 -->
+            <h3>42</h3>
+            <!-- icono del personaje 2 -->
+            <i class="fa-solid fa-skull-crossbones"></i>
+            <!-- imagen del personaje 2 (se muestra por duplicado) -->
+            <div class="card-image">
+                <!-- imagen del personaje 2-->
+                <img src="img/perfil.png" alt="nombre apellidos">
+                <!-- sombra del personaje 2 -->
+                <img class="blur" src="img/perfil.png" alt="nombre del personaje">
+            </div>
+            <!-- descripcion del personaje 2-->
+            <div class="text">
+                <h2>Personaje 2</h2>
+                <h4>Profesión del personaje 2</h4>
+                <p>Descripción del personaje.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime veritatis eaque fugit itaque
+                    molestias minima recusandae deleniti nam, necessitatibus blanditiis perferendis quasi ex provident
+                    id, et esse fugiat.</p>
+            </div>
+        </div>
+        <!-- ficha del personaje 3 -->
+        <div class="card">
+            <!-- edad del personaje 3-->
+            <h3>18</h3>
+            <!-- icono del personaje 3-->
+            <i class="fa-solid fa-person"></i>
+            <!-- imagen del personaje 3 (se muestra por duplicado) -->
+            <div class="card-image">
+                <!-- imagen del personaje 3 -->
+                <img src="img/perfil.png" alt="nombre apellidos">
+                <!-- sombra del personaje 3 -->
+                <img class="blur" src="img/perfil.png" alt="nombre del personaje">
+            </div>
+            <!-- descripcion del personaje 3 -->
+            <div class="text">
+                <h2>Personaje 3</h2>
+                <h4>Profesión del personaje 3</h4>
+                <p>Descripción del personaje.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit placeat corporis distinctio, alias neque voluptates obcaecati ex non sunt doloremque, incidunt praesentium.</p>
+            </div>
+        </div>
+    </main>
+    <!-- acontecimientos -->
+    <section class="pistas contenedor-80" id="acontecimientos">
+        <h2>Acontecimientos</h2>
+        <!-- pistas sobre el suceso 1 -->
+        <article class="pista">
+            <!-- título de la pista 1-->
+            <h2>Título de la pista</h2>
+            <div class="info">
+                <!-- personajes implicados en la pista 1-->
+                <h3>Personajes implicados: <span class="texto-normal">nombre personaje 1, nombre personaje 2</span></h3>
+                <!-- imágenes de los personajes implicados -->
+                <div class="imagenes-mini">
+                    <figure>
+                        <img src="img/perfil.png" alt="">
+                        <figcaption>Nombre personaje 1</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/perfil.png" alt="">
+                        <figcaption>Nombre personaje 2</figcaption>
+                    </figure>
+                </div>
+                <!-- descripción de la pista relacionada con el suceso. -->
+                <h3>Descripción:</h3>
+                <ul class="texto-normal">
+                    <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea facere eligendi error illum!.
+                    </li>
+                    <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci, libero non pariatur repellat
+                        soluta aperiam assumenda iste. Temporibus sunt nihil excepturi laudantium iure perferendis totam
+                        soluta sit voluptate. Voluptate, ex tenetur.
+                    </li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, et reprehenderit saepe excepturi sunt quod vero consectetur. Quo, doloremque.
+                    </li>
+                </ul>
+            </div>
+        </article>
+        <!-- pistas sobre el suceso 2-->
+        <article class="pista">
+            <!-- título de la pista 2-->
+            <h2>Título de la pista</h2>
+            <div class="info">
+                <!-- personajes implicados en la pista 2-->
+                <h3>Personajes implicados: <span class="texto-normal">nombre personaje 1, nombre personaje 2</span></h3>
+                <!-- imágenes de los personajes implicados -->
+                <div class="imagenes-mini">
+                    <figure>
+                        <img src="img/perfil.png" alt="">
+                        <figcaption>Nombre personaje 1</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/perfil.png" alt="">
+                        <figcaption>Nombre personaje 2</figcaption>
+                    </figure>
+                </div>
+                <!-- descripción de la pista relacionada con el suceso. -->
+                <h3>Descripción:</h3>
+                <ul class="texto-normal">
+                    <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae, assumenda molestias.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit cum saepe quaerat, ea architecto laudantium aliquam sunt earum id laboriosam asperiores tenetur! Sapiente rerum dignissimos cumque doloremque repudiandae. Dolorem, explicabo fugit!
+                    </li>
+                </ul>
+            </div>
+        </article>
+    </section>
+    <!-- sección correspondiente a las estadísticas de los personajes -->
+    <section id="estadisticas" class="contenedor-80">
+        <h2>Estadísticas</h2>
+        <div class="est-datos">
+            <!-- tabla con el número total de sospechosos (únicamente figuran 
+                los sospechosos, no las víctimas)-->
+            <div class="est-tabla">
+                <h3>Número de sospechosos por franja de edad</h3>
+                <table class="texto-normal">
+                    <thead>
+                        <tr>
+                            <th colspan="2">Nº de Sospechosos</th>
+                        </tr>
+                        <tr>
+                            <th>Datos</th>
+                            <th>Valor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>entre 0 y 17 años</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>entre 18 y 25 años</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>entre 26 y 35 años</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>entre 36 y 45 años</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>más de 46 años</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th>Nº total</th>
+                            <th>3</th>
+                        </tr>
+                        <tr class="no-border">
+                            <td colspan="2" >Promedio de edad: 31.67 años</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="est-lista">
+            <!-- listamos todos los personajes menos la víctima, ordenados por el número de votos. con el siguiente formato:
+              #9.- Nombre Apellidos - (9 años) - 99 de 99 votos (99.99%) 
+            los hombres tendrán un estilo diferente de las mujeres. -->
+                <h3>Listado de personajes sospechosos y proporción de votos</h3>
+                <div class="texto-normal">
+                    <p>#1.- Nombre Apellidos personaje3 - (18 años) - 10 de 30 votos (33.33%)</p>
+                    <p>#2.- Nombre Apellidos personaje1 - (35 años) - 20 de 30 votos (66.66%)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- flecha para navegar a la parte superior -->
+    <div id="nav-flecha"><a href="#inicio"><i class="fa-solid fa-arrow-up"></i></a></div>
+    <footer>
+        <p class="texto-normal">Lenguajes de Marcas. Curso 2025/2026</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+p {
+  font-family: sans-serif;
+}
+
+p:nth-of-type(2) {
+  font-family: "Courier New", Courier, monospace;
+}
