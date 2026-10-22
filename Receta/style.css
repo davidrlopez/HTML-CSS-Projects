@@ -1,0 +1,40 @@
+html {
+  background-color: bisque;
+}
+h1 {
+  font-family: "Edu QLD Hand", bold;
+  font-size: 320%;
+  display: flex;
+  justify-content: center;
+}
+h2 {
+  font-family: StoryScript-Regular;
+  display: flex;
+  font-size: 250%;
+}
+ul {
+  border-bottom: thin;
+  font-family: "Edu QLD Hand", cursive;
+}
+li {
+  border-bottom: thin;
+  font-family: "Edu QLD Hand", cursive;
+  text-decoration: underline solid black;
+}
+ol {
+  font-family: "Courier New", Courier, monospace;
+}
+footer p,
+footer em {
+  font-family: "Edu QLD Hand", cursive;
+  font-style: italic;
+}
+
+footer p {
+  font-weight: 400;
+}
+
+footer em {
+  font-weight: 700;
+  color: burlywood;
+}
