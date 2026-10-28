@@ -47,7 +47,8 @@ h1 {
   font-size: 4rem;
 }
 
-h2 {
+h2,
+h3 {
   margin: 0 0 1rem;
   text-align: left;
   color: var(--oliva);
@@ -55,6 +56,9 @@ h2 {
     700 1.5rem/1.2 "Bricolage Grotesque",
     "Trebuchet MS",
     sans-serif;
+}
+h3 {
+  font-size: 1.25rem;
 }
 img {
   margin: 0 auto;
@@ -77,6 +81,7 @@ li {
   text-align: left;
   padding-left: 0.25rem;
   margin-bottom: 0.5rem;
+  max-width: 35em;
 }
 
 li::marker {
@@ -139,15 +144,28 @@ iframe {
 
 .ingredientes ul,
 .pasos ol,
-h2 {
+h2,
+h3,
+details {
   background-color: var(--papel);
   border: solid 2px var(--oliva);
   padding: 1rem;
   margin: 0;
 }
+details {
+  margin-top: 1rem;
+  text-align: left;
+}
+details p {
+  max-width: 35em;
+  margin-bottom: 0;
+}
 .ingredientes li,
 .pasos li {
   margin-left: 1rem;
+}
+.pasos li + li {
+  margin-top: 2.25em;
 }
 
 @media (min-width: 60rem) {
