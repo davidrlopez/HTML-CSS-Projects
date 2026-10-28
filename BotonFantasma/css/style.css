@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Creepster&family=Special+Elite&display=swap");
+
+:root {
+  --hueso: #ede6d6;
+  --sangre: #8b0000;
+  --velo: rgb(0 0 0 / 0.5);
+}
+
+h1 {
+  font:
+    400 clamp(3rem, 12vw, 7rem) / 1 "Creepster",
+    cursive;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin: 0;
+}
+
+body {
+  background:
+    linear-gradient(var(--velo), var(--velo)),
+    url(../img/fondo-escritorio.jpg) center bottom / cover #000;
+  margin: 0;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 2rem 1.5rem;
+  color: var(--hueso);
+  font-family: "Special Elite", "Courier New", monospace;
+}
+
+.descripcion {
+  font:
+    clamp(1rem, 4vw, 2.5rem)/1.5 "Special Elite",
+    "Courier New",
+    monospace;
+  margin-top: 30vh;
+  padding: 2rem;
+}
+
+footer {
+  text-align: start;
+  font-size: 0.875rem;
+  font-size: 1rem;
+  margin-top: 27vh;
+}
+footer p {
+  margin: 0.25rem 0;
+}
+
+.fantasma {
+  font: inherit;
+  color: var(--hueso);
+  border: 2px solid var(--hueso);
+  background-color: transparent;
+  background-image: linear-gradient(var(--sangre), var(--sangre));
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100% 0%;
+  transition: background-size 0.6s ease-in;
+  display: block;
+  margin: 0 auto;
+  padding-top: 0.5rem;
+  font-size: 1.25rem;
+  padding: 0.9rem 2rem;
+}
+.fantasma:hover,
+.fantasma:focus-visible {
+  background-size: 100% 100%;
+}
+.fantasma:focus-visible {
+  outline: 2px solid var(--hueso);
+  outline-offset: 4px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .fantasma {
+    transition: none;
+  }
+}
+@media (max-width: 40rem) {
+  body {
+    background-image:
+      linear-gradient(var(--velo), var(--velo)), url(../img/fondo-movil.jpg);
+  }
+}

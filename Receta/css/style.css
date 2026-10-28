@@ -1,1 +1,163 @@
-../style.css
+@import url("https://fonts.googleapis.com/css2?family=Young+Serif&display=swap");
+
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("../fonts/Bricolage_Grotesque/BricolageGrotesque-Variable.ttf")
+    format("truetype");
+  font-weight: 200 800;
+}
+
+@font-face {
+  font-family: "Recursive";
+  src: url("../fonts/Recursive/Recursive-Variable.ttf") format("truetype");
+  font-weight: 300 1000;
+  font-style: oblique 0deg 15deg;
+}
+
+:root {
+  --papel: #ffffff;
+  --tinta: #222222;
+  --oliva: #4a5a1c;
+  --gris: #5c5c5c;
+  --linea: #d9d6cc;
+}
+
+body {
+  margin: 0;
+  background: var(--papel);
+  color: var(--tinta);
+  font:
+    1rem/1.5 Georgia,
+    "Times New Roman",
+    serif;
+  background-image: url(../img/abstract-geometric-pattern-with-yellow-square-grid-and-diagonal-white-lines-yellow-fabric-background-vector.jpg);
+  background-repeat: round;
+}
+
+main,
+footer {
+  text-align: center;
+  padding: 0 1.5rem;
+}
+
+h1 {
+  margin: 0 auto;
+  padding-top: 2.5rem;
+  font-family: "Young Serif", Georgia, serif;
+  font-size: 4rem;
+}
+
+h2 {
+  margin: 0 0 1rem;
+  text-align: left;
+  color: var(--oliva);
+  font:
+    700 1.5rem/1.2 "Bricolage Grotesque",
+    "Trebuchet MS",
+    sans-serif;
+}
+img {
+  margin: 0 auto;
+  width: 50rem;
+  max-width: 100%;
+  height: auto;
+}
+figcaption {
+  font-weight: 900;
+  font-size: 1rem;
+}
+ul,
+ol {
+  text-align: left;
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+li {
+  text-align: left;
+  padding-left: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+li::marker {
+  color: var(--oliva);
+  font-weight: bold;
+}
+
+footer {
+  margin-top: 4rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-top: 1px solid var(--linea);
+  background-color: var(--papel);
+}
+
+footer p {
+  margin: 0;
+  font-family: "Recursive", Verdana, sans-serif;
+  font-size: 1.25rem;
+  color: var(--oliva);
+}
+
+.nombre {
+  font-weight: 800;
+  font-variation-settings: "CASL" 1;
+}
+
+.apellidos {
+  font-weight: 300;
+  font-variation-settings: "CASL" 0;
+}
+
+main {
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+figure {
+  margin: 0;
+}
+
+iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border: 0;
+}
+
+.presentacion,
+.pasos,
+.ingredientes {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+}
+.presentacion,
+.pasos {
+  margin-top: 1.5rem;
+}
+
+.ingredientes ul,
+.pasos ol,
+h2 {
+  background-color: var(--papel);
+  border: solid 2px var(--oliva);
+  padding: 1rem;
+  margin: 0;
+}
+.ingredientes li,
+.pasos li {
+  margin-left: 1rem;
+}
+
+@media (min-width: 60rem) {
+  .presentacion,
+  .pasos {
+    grid-template-columns: 3fr 2fr;
+    column-gap: 1.5rem;
+    align-items: start;
+  }
+  .pasos iframe {
+    grid-row: span 2;
+  }
+}
