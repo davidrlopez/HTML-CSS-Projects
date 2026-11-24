@@ -20,6 +20,14 @@
   --oliva: #4a5a1c;
   --gris: #5c5c5c;
   --linea: #d9d6cc;
+  --salvia: #e4e8d3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -31,10 +39,13 @@ body {
     "Times New Roman",
     serif;
   background-image: url(../img/abstract-geometric-pattern-with-yellow-square-grid-and-diagonal-white-lines-yellow-fabric-background-vector.jpg);
-  background-repeat: round;
+  background-repeat: round repeat;
 }
-
+main {
+  display: grid;
+}
 main,
+header,
 footer {
   text-align: center;
   padding: 0 1.5rem;
@@ -44,7 +55,7 @@ h1 {
   margin: 0 auto;
   padding-top: 2.5rem;
   font-family: "Young Serif", Georgia, serif;
-  font-size: 4rem;
+  font-size: clamp(2rem, 1.45rem + 2.73vw, 3.5rem);
 }
 
 h2,
@@ -66,10 +77,6 @@ img {
   max-width: 100%;
   height: auto;
 }
-figcaption {
-  font-weight: 900;
-  font-size: 1rem;
-}
 ul,
 ol {
   text-align: left;
@@ -81,7 +88,7 @@ li {
   text-align: left;
   padding-left: 0.25rem;
   margin-bottom: 0.5rem;
-  max-width: 35em;
+  max-width: 60ch;
 }
 
 li::marker {
@@ -116,6 +123,7 @@ footer p {
 
 main {
   max-width: 75rem;
+  width: 92%;
   margin: 0 auto;
 }
 
@@ -130,16 +138,32 @@ iframe {
   border: 0;
 }
 
-.presentacion,
+.datos-clave,
 .pasos,
 .ingredientes {
   display: grid;
   gap: 1rem;
   align-content: start;
 }
-.presentacion,
+.datos-clave,
+.ingredientes,
 .pasos {
   margin-top: 1.5rem;
+}
+
+.datos-clave div {
+  background-color: var(--papel);
+  border: solid 2px var(--oliva);
+  padding: 0.5rem;
+}
+dt {
+  font-weight: bold;
+  color: var(--oliva);
+}
+
+.ingredientes {
+  background-color: var(--salvia);
+  padding: 1rem;
 }
 
 .ingredientes ul,
@@ -157,7 +181,7 @@ details {
   text-align: left;
 }
 details p {
-  max-width: 35em;
+  max-width: 60ch;
   margin-bottom: 0;
 }
 .ingredientes li,
@@ -165,17 +189,39 @@ details p {
   margin-left: 1rem;
 }
 .pasos li + li {
-  margin-top: 2.25em;
+  margin-top: 2.25rem;
 }
 
-@media (min-width: 60rem) {
-  .presentacion,
-  .pasos {
-    grid-template-columns: 3fr 2fr;
+@media (min-width: 600px) {
+  main {
+    grid-template-columns: repeat(1, 4fr);
     column-gap: 1.5rem;
     align-items: start;
   }
-  .pasos iframe {
-    grid-row: span 2;
+  .datos-clave {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 960px) {
+  main {
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+      "foto foto"
+      "datos datos"
+      "ingredientes pasos";
+    align-items: start;
+    column-gap: 2rem;
+  }
+  .foto-plato {
+    grid-area: foto;
+  }
+  .datos-clave {
+    grid-area: datos;
+  }
+  .ingredientes {
+    grid-area: ingredientes;
+  }
+  .pasos {
+    grid-area: pasos;
   }
 }

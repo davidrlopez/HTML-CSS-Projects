@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PX frente a REM</title>
+
+    <style>
+      html {
+        font-size: 62.5%;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 40px;
+        font-family: Arial, sans-serif;
+        background: #f3f4f6;
+      }
+
+      .cards {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+      }
+
+      .card {
+        width: 320px;
+        border: 1px solid #d1d5db;
+        border-radius: 8px;
+        background: white;
+      }
+
+      .card h2,
+      .card p {
+        margin: 0;
+      }
+
+      .card--px {
+        padding: 20px;
+      }
+
+      .card--px h2 {
+        font-size: 24px;
+      }
+
+      .card--px p {
+        margin-top: 12px;
+        font-size: 16px;
+      }
+
+      .card--rem {
+        padding: 2rem;
+      }
+
+      .card--rem h2 {
+        font-size: 2.4rem;
+      }
+
+      .card--rem p {
+        margin-top: 1.2rem;
+        font-size: 1.6rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="cards">
+      <article class="card card--px">
+        <h2>Tarjeta A</h2>
+        <p>Esta tarjeta utiliza medidas fijas en píxeles.</p>
+      </article>
+
+      <article class="card card--rem">
+        <h2>Tarjeta B</h2>
+        <p>Esta tarjeta utiliza medidas relativas en rem.</p>
+      </article>
+    </main>
+  </body>
+</html>
+```
+
+<!-- Con el tamaño predeterminado de 16px, ambas se ven iguales. -->
+<!-- Al cambiar la fuente predeterminada del navegador a 24px: -->
+<!-- - Tarjeta A: permanece igual (título 24px, texto 16px y padding 20px). -->
+<!-- - Tarjeta B: aumenta proporcionalmente (título 36px, texto 24px y padding 30px). -->
+<!-- Esto ocurre porque px es una unidad fija y rem es relativa, al cambiar el tamaño base en % pues rem se adapta y px sigue fijo -->
